@@ -3,6 +3,7 @@
 <template>
 	<div>
 		<div class="container">
+			<WorksBlock />
 			<FeedbackBlock />
 		</div>
 	</div>
