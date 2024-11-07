@@ -6,22 +6,20 @@ defineProps<Props>()
 
 <template>
 	<section class="feedback-block">
-		<div class="container">
-			<div class="feedback-block__wrapper">
-				<div class="feedback-block__texts">
-					<h2 class="feedback-block__title">Let’s work together</h2>
-					<p class="feedback-block__text">
-						This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com This is a template
-						Figma file, turned into code using Anima. Learn more at AnimaApp.com
-					</p>
+		<div class="feedback-block__wrapper">
+			<div class="feedback-block__texts">
+				<h2 class="feedback-block__title">Let’s work together</h2>
+				<p class="feedback-block__text">
+					This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com This is a template
+					Figma file, turned into code using Anima. Learn more at AnimaApp.com
+				</p>
 
-					<div class="feedback-block__social">
-						<SocialBlock />
-					</div>
+				<div class="feedback-block__social">
+					<SocialBlock />
 				</div>
-				<div class="feedback-block__forms">
-					<FeedbackForm />
-				</div>
+			</div>
+			<div class="feedback-block__forms">
+				<FeedbackForm />
 			</div>
 		</div>
 	</section>
@@ -29,6 +27,7 @@ defineProps<Props>()
 
 <style lang="scss">
 .feedback-block {
+	border-top: 1px solid var(--color-black-20);
 	padding: 70px 0;
 
 	&__wrapper {
