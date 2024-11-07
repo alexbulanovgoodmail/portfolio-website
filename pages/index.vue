@@ -2,6 +2,8 @@
 
 <template>
 	<div>
-		<FeedbackBlock />
+		<div class="container">
+			<FeedbackBlock />
+		</div>
 	</div>
 </template>
