@@ -4,6 +4,7 @@
 	<div>
 		<div class="container">
 			<HeroBlock />
+			<SkillsBlock />
 			<WorksBlock />
 			<FeedbackBlock />
 		</div>
