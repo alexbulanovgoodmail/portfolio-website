@@ -3,6 +3,7 @@
 <template>
 	<div>
 		<div class="container">
+			<HeroBlock />
 			<WorksBlock />
 			<FeedbackBlock />
 		</div>
