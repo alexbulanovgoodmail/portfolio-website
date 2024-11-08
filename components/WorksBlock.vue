@@ -16,7 +16,11 @@ defineProps<Props>()
 
 <style lang="scss">
 .works-block {
-	padding: 40px 0;
+	padding: 50px 0;
+
+	@media screen and (min-width: $md) {
+		padding: 100px 0;
+	}
 
 	&__title {
 		margin: 0 0 60px;
