@@ -8,9 +8,9 @@ defineProps<Props>()
 	<div class="work-preview">
 		<a class="work-preview__link" href="#!">
 			<div class="work-preview__image-container">
-				<img class="work-preview__image" src="/images/Image.jpg" width="315" height="315" alt="" />
+				<img class="work-preview__image" src="/images/Work.jpg" width="315" height="315" alt="" />
 			</div>
-			<p class="work-preview__title typo-p-medium">Free Bird</p>
+			<p class="work-preview__title typo-h4">Free Bird</p>
 			<p class="work-preview__text">Lynyrd Skynyrd</p>
 		</a>
 	</div>
@@ -56,7 +56,6 @@ defineProps<Props>()
 
 	&__title {
 		margin: 0 0 10px;
-		font-weight: 600;
 	}
 
 	&__text {
