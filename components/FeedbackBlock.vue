@@ -44,6 +44,10 @@ defineProps<Props>()
 		grid-column: span 4 / span 4;
 
 		@media screen and (min-width: $md) {
+			grid-column: span 5 / span 5;
+		}
+
+		@media screen and (min-width: $lg) {
 			grid-column: span 4 / span 4;
 		}
 	}
