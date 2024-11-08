@@ -3,7 +3,7 @@
 .typo-h1 {
 	font-size: 65px;
 	font-weight: 600;
-	line-height: 140%;
+	line-height: 110%;
 
 	@media screen and (min-width: $md) {
 		font-size: 90px;
@@ -18,6 +18,12 @@
 
 .typo-h3 {
 	font-size: 27px;
+	font-weight: 600;
+	line-height: 140%;
+}
+
+.typo-h4 {
+	font-size: 20px;
 	font-weight: 600;
 	line-height: 140%;
 }
