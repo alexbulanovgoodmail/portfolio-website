@@ -6,6 +6,7 @@
 			<HeroBlock />
 			<SkillsBlock />
 			<WorksBlock />
+			<ClientsBlock />
 			<FeedbackBlock />
 		</div>
 	</div>
