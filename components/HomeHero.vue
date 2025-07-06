@@ -14,6 +14,27 @@ const props = defineProps<Props>()
 const { title, text, button } = props.content
 
 const { renderBlock } = useDatoRender()
+const eye = ref<HTMLElement | null>(null)
+
+function handleMouseMove(event: MouseEvent): void {
+	if (!eye.value) return
+
+	const rect = eye.value.getBoundingClientRect()
+	const eyeCenterX = rect.left + rect.width / 2
+	const eyeCenterY = rect.top + rect.height / 2
+
+	const dx = event.clientX - eyeCenterX
+	const dy = event.clientY - eyeCenterY
+
+	const offsetX = Math.min(Math.max(dx * 0.1, -10), 10) // ограничим смещение по X
+	const offsetY = Math.min(Math.max(dy * 0.1, -10), 10) // и по Y
+
+	eye.value.style.transform = `translate(${offsetX}px, ${offsetY}px)`
+}
+
+onMounted(() => {
+	document.body.addEventListener('mousemove', handleMouseMove)
+})
 </script>
 
 <template>
@@ -30,6 +51,9 @@ const { renderBlock } = useDatoRender()
 				</div>
 				<div class="home-hero__images">
 					<div class="home-hero__image-container">
+						<div class="home-hero__eye">
+							<img ref="eye" src="~/assets/images/eye.svg" width="44" height="44" alt="" />
+						</div>
 						<img class="home-hero__image" src="~/assets/images/mac.svg" width="288" height="227" alt="" />
 					</div>
 				</div>
@@ -93,6 +117,46 @@ const { renderBlock } = useDatoRender()
 		display: flex;
 		width: 100%;
 		height: auto;
+	}
+
+	&__eye {
+		display: none;
+
+		img {
+			width: 50%;
+			height: 50%;
+		}
+
+		@media screen and (min-width: $lg) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 10;
+			border-radius: 100%;
+			width: 18%;
+			height: 72px;
+			background-color: var(--color-bg);
+			transform: translate(calc(-50% + 12px), calc(-50% - 10px));
+		}
+
+		@media screen and (min-width: $xl) {
+			top: 50%;
+			left: 51%;
+			width: 18%;
+			height: 90px;
+			transform: translate(calc(-50% + 10px), calc(-50% - 12px));
+		}
+
+		@media screen and (min-width: $xxl) {
+			top: 50%;
+			left: 51%;
+			width: 18%;
+			height: 110px;
+			transform: translate(calc(-50% + 14px), calc(-50% - 14px));
+		}
 	}
 
 	&__quick-links {
