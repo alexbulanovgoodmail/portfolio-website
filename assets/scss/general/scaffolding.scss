@@ -26,6 +26,7 @@ body {
 }
 
 body {
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	padding: 68px 8px 0;
@@ -64,6 +65,16 @@ body {
 		font-size: 20px;
 		line-height: 26px;
 	}
+}
+
+html {
+	overflow: hidden;
+	height: 100%;
+}
+
+body {
+	overflow: auto;
+	height: 100%;
 }
 
 body > #__nuxt {
