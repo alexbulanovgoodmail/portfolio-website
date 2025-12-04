@@ -1,4 +1,4 @@
-![Превью сайта](https://github.com/alexbulanovgoodmail/nuxt-portfolio-website/blob/main/preview.jpg?raw=true)
+![Превью сайта](https://github.com/alexbulanovgoodmail/portfolio-website/blob/main/preview.jpg?raw=true)
 
 [Посмотреть](https://alex-bulanov-portfolio-website.netlify.app)
 
